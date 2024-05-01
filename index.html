@@ -17,6 +17,13 @@
         background-image: url("../images/EZZE Design Image.png");
         background-size: cover;
       }
+
+      .scrolling-background {
+            background-image: url('image1.jpg'), url('image2.jpg'); /* Combine both images */
+            background-repeat: no-repeat, repeat-y; /* Don't repeat image1, repeat image2 vertically */
+            background-position: top left, top left; /* Position both images at the top left corner */
+        }
+
     </style>
   <head>
     <link rel="icon" type="image/png" href="https://www.pngall.com/wp-content/uploads/2018/04/Soup-PNG-File.png" />
@@ -24,6 +31,7 @@
     <title>Home | Souple</title>
   </head>
   <body class="background">
+    <div class="scrolling-background"></div>
     <header>
       <center>
         <button onclick="changePageTitle('lol you got scammed')">
