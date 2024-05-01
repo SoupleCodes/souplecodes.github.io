@@ -1,2 +1,2 @@
-# souple.github.io
+# Home
 A website anything and everything about soup :D
