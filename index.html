@@ -13,7 +13,8 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background-image: url('EZZE Design Image.png');
+        background-image: url("../images/EZZE Design Image.png");
+        background-size: cover;
         animation: animateBackground 20s linear infinite;
       }
   
@@ -27,9 +28,18 @@
     <meta charset="utf-8">
     <title>Home | Souple</title>
   </head>
-  <body>
+  <body class="background">
     <header>
-      <center>    
+      <center>
+        <button onclick="changePageTitle('lol you got scammed')">
+          Give me an unlimited supply of soup =D
+      </button>
+   
+      <script type="text/javascript">
+          function changePageTitle(newtitle) {
+              document.title = newtitle;
+          }
+          </script>    
         <h1>Souple.com</h1>
         <nav>
           <a href="#" onclick="changePageTitle('Home'); return false;">Home</a>
