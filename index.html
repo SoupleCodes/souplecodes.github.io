@@ -16,8 +16,24 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background-image: url("../images/EZZE Design Image.png");
-      background-size: cover;
+      z-index: -1; /* Set z-index to move behind other elements */
+    }
+
+    header {
+      position: relative; /* Ensure position:relative for z-index to work */
+      z-index: 1; /* Set z-index higher than the background */
+    }
+
+    /* Additional styling for header elements */
+    header center {
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Additional styling for header elements */
+    header nav {
+      position: relative;
+      z-index: 1;
     }
   </style>
 
@@ -26,7 +42,7 @@
   <title>Home | Souple</title>
 </head>
 
-<body>
+<body class="background">
   <header>
     <center>
       <button onclick="changePageTitle('lol you got scammed')">
@@ -39,7 +55,7 @@
         <a href="#" onclick="changePageTitle('Contact'); return false;">Contact</a>
       </nav>
     </center>
-    <p style=" position: absolute; bottom: 0; left: 0; width: 100%; text-align: center;">All soups reserved 2024</p>
+    <p style="position: absolute; bottom: 0; left: 0; width: 100%; text-align: center; z-index: 1;">All soups reserved 2024</p>
   </header>
 
   <div id="imageContainer"></div>
@@ -57,7 +73,7 @@
       return img;
     }
 
-    var image1 = createImage("../images/Wood.png", 0, 0, 853, 768);
+    var image1 = createImage("../images/Wood.png", 0, 0, 800, 768);
   </script>
 
   <script type="text/javascript">
