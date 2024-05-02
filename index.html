@@ -18,17 +18,6 @@
         background-size: cover;
       }
 
-      .scrolling-background {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 50%; /* Adjust the width as needed */
-            height: 100%;
-            background-image: url("../images/Vector.png"), url("../images/Vector (1).png"); /* Combine both images */
-            background-repeat: no-repeat, repeat-y; /* Don't repeat image1, repeat image2 vertically */
-            background-position: top left, top left; /* Position both images at the top left corner */
-        }
-
     </style>
   <head>
     <link rel="icon" type="image/png" href="https://www.pngall.com/wp-content/uploads/2018/04/Soup-PNG-File.png" />
@@ -40,7 +29,9 @@
         <button onclick="changePageTitle('lol you got scammed')">
           Give me an unlimited supply of soup =D
       </button>
-   
+      <script src="scripts.js">
+        createImage("../images/Wood.png", 0,0,853,768)
+      </script>
       <script type="text/javascript">
           function changePageTitle(newtitle) {
               document.title = newtitle;
@@ -56,7 +47,7 @@
       </center>
       <p style=" position: absolute; bottom: 0; left: 0; width: 100%; text-align: center;">All soups reserved 2024</p>	
     </header>
-  <body class="background scrolling-background">
+  <body class="background">
     
     <script type="text/javascript">
       function changePageTitle(newTitle) {
