@@ -1,42 +1,7 @@
 <!DOCTYPE HTML>
 <html>
-
 <head>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      overflow: hidden;
-      background: rgba(254, 234, 164);
-    }
-
-    .background {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -1; /* Set z-index to move behind other elements */
-    }
-
-    header {
-      position: relative; /* Ensure position:relative for z-index to work */
-      z-index: 1; /* Set z-index higher than the background */
-    }
-
-    /* Additional styling for header elements */
-    header center {
-      position: relative;
-      z-index: 1;
-    }
-
-    /* Additional styling for header elements */
-    header nav {
-      position: relative;
-      z-index: 1;
-    }
-  </style>
-
+  <link rel="stylesheet" href="styles.css">
   <link rel="icon" type="image/png" href="https://www.pngall.com/wp-content/uploads/2018/04/Soup-PNG-File.png" />
   <meta charset="utf-8">
   <title>Home | Souple</title>
@@ -56,32 +21,14 @@
       </nav>
     </center>
     <p style="position: absolute; bottom: 0; left: 0; width: 100%; text-align: center; z-index: 1;">All soups reserved 2024</p>
+    <img src="../images/Wood.png" alt="Wood" style="width:60%;">
+    <img src="Logo.png" alt="My Logo" id="logo">
   </header>
-
-  <div id="imageContainer"></div>
-
   <script>
-    function createImage(src, x, y, width, height) {
-      var img = document.createElement("img");
-      img.src = src;
-      img.style.position = "absolute";
-      img.style.left = x + "px";
-      img.style.top = y + "px";
-      img.style.width = width + "px";
-      img.style.height = height + "px";
-      document.getElementById("imageContainer").appendChild(img);
-      return img;
-    }
-
-    var image1 = createImage("../images/Wood.png", 0, 0, 800, 768);
-  </script>
-
-  <script type="text/javascript">
     function changePageTitle(newtitle) {
       document.title = newtitle;
     }
   </script>
 
 </body>
-
 </html>
