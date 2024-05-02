@@ -24,19 +24,30 @@
     <meta charset="utf-8">
     <title>Home | Souple</title>
   </head>
-  <header>
-      <center>
+  <header>      <center>
         <button onclick="changePageTitle('lol you got scammed')">
           Give me an unlimited supply of soup =D
       </button>
-      <script src="scripts.js">
-        createImage("../images/Wood.png", 0,0,853,768)
+      <script>
+        function createImage(src, x, y, width, height) {
+          var img = document.createElement("img");
+         img.src = src;
+         img.style.position = "absolute";
+         img.style.left = x + "px";
+         img.style.top = y + "px";
+         img.style.width = width + "px";
+         img.style.height = height + "px";
+    document.getElementById("imageContainer").appendChild(img);
+    return img;
+
+     var image1 = createImage("../images/Wood.png", 0,0,853,768)
       </script>
       <script type="text/javascript">
           function changePageTitle(newtitle) {
               document.title = newtitle;
-          }
-          </script>    
+          
+          </script> 
+             
         <h1>Souple.com</h1>
         <nav>
           <a href="#" onclick="changePageTitle('Home'); return false;">Home</a>
@@ -48,6 +59,7 @@
       <p style=" position: absolute; bottom: 0; left: 0; width: 100%; text-align: center;">All soups reserved 2024</p>	
     </header>
   <body class="background">
+    <div id="imageContainer"></div>
     
     <script type="text/javascript">
       function changePageTitle(newTitle) {
