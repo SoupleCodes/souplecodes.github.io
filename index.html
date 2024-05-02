@@ -1,70 +1,71 @@
 <!DOCTYPE HTML>
 <html>
+
+<head>
   <style>
-      body {
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
-        background: rgba(254, 234, 164);
-      }
-  
-      .background {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-image: url("../images/EZZE Design Image.png");
-        background-size: cover;
-      }
+    body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background: rgba(254, 234, 164);
+    }
 
-    </style>
+    .background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("../images/EZZE Design Image.png");
+      background-size: cover;
+    }
+  </style>
 
-  <head>
-    <link rel="icon" type="image/png" href="https://www.pngall.com/wp-content/uploads/2018/04/Soup-PNG-File.png" />
-    <meta charset="utf-8">
-    <title>Home | Souple</title>
-  </head>
+  <link rel="icon" type="image/png" href="https://www.pngall.com/wp-content/uploads/2018/04/Soup-PNG-File.png" />
+  <meta charset="utf-8">
+  <title>Home | Souple</title>
+</head>
+
+<body>
   <header>
     <center>
-        <button onclick="changePageTitle('lol you got scammed')">
-          Give me an unlimited supply of soup =D </button>
-        <h1>Souple.com</h1>
-        <nav>
-          <a href="#" onclick="changePageTitle('Home'); return false;">Home</a>
-          <a href="#" onclick="changePageTitle('About'); return false;">About</a>
-          <a href="#" onclick="changePageTitle('Recipes'); return false;">Recipes</a>
-          <a href="#" onclick="changePageTitle('Contact'); return false;">Contact</a>
-        </nav>
+      <button onclick="changePageTitle('lol you got scammed')">
+        Give me an unlimited supply of soup =D </button>
+      <h1>Souple.com</h1>
+      <nav>
+        <a href="#" onclick="changePageTitle('Home'); return false;">Home</a>
+        <a href="#" onclick="changePageTitle('About'); return false;">About</a>
+        <a href="#" onclick="changePageTitle('Recipes'); return false;">Recipes</a>
+        <a href="#" onclick="changePageTitle('Contact'); return false;">Contact</a>
+      </nav>
     </center>
-    <p style=" position: absolute; bottom: 0; left: 0; width: 100%; text-align: center;">All soups reserved 2024</p>	
-    </header>
-  <body class="background">
-    <div id="imageContainer"></div>
-    <script>
-      function createImage(src, x, y, width, height) {
-        var img = document.createElement("img");
-       img.src = src;
-       img.style.position = "absolute";
-       img.style.left = x + "px";
-       img.style.top = y + "px";
-       img.style.width = width + "px";
-       img.style.height = height + "px";
-  document.getElementById("imageContainer").appendChild(img);
-  return img;
+    <p style=" position: absolute; bottom: 0; left: 0; width: 100%; text-align: center;">All soups reserved 2024</p>
+  </header>
 
-   var image1 = createImage("../images/Wood.png", 0,0,853,768)
-    </script>
-    <script type="text/javascript">
-        function changePageTitle(newtitle) {
-            document.title = newtitle;
-        
-        </script> 
-    
-    <script type="text/javascript">
-      function changePageTitle(newTitle) {
-        document.title = newTitle + " | Souple";
-      }
-    </script>
-  </body>
+  <div id="imageContainer"></div>
+
+  <script>
+    function createImage(src, x, y, width, height) {
+      var img = document.createElement("img");
+      img.src = src;
+      img.style.position = "absolute";
+      img.style.left = x + "px";
+      img.style.top = y + "px";
+      img.style.width = width + "px";
+      img.style.height = height + "px";
+      document.getElementById("imageContainer").appendChild(img);
+      return img;
+    }
+
+    var image1 = createImage("../images/Wood.png", 0, 0, 853, 768);
+  </script>
+
+  <script type="text/javascript">
+    function changePageTitle(newtitle) {
+      document.title = newtitle;
+    }
+  </script>
+
+</body>
+
 </html>
