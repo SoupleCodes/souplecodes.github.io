@@ -6,6 +6,7 @@ body {
   cursor: url("../images/soupcursor.png"), auto;
 }
 
+
 button {
   background-color: rgba(254,234,164);
   color: rgba(0,0,0);
@@ -47,6 +48,7 @@ header nav {
 
 nav a {
   padding: 15px;
+  cursor: url("../images/spoonpointer.png"), default;
 }
 
 #logo {
