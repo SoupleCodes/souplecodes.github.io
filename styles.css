@@ -13,15 +13,15 @@ button {
   border-radius: 6px
 }
 
+.trollbutton:hover {
+  background-color: rgba(197, 178, 111);
+  color: white;
+}
 
 .trollbutton {
   position: relative;
   top: -35;
   left: 580;
-}
-
-cursor {
-  url("../images/Logo.png")
 }
 
 .background {
