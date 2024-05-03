@@ -40,15 +40,6 @@ body {
   img {
     display: block;
     margin: 0 auto;
-    z index = -1
-  }
-  
-  #logo {
-    position: absolute;
-    top: 20px;
-    left: 14%;
-    transform: translateX(-50%);
-    max-width: 15%; 
   }
   
   /* Media Queries for smaller screens */
@@ -57,7 +48,4 @@ body {
     header {
       text-align: center;
     }
-  
-    #logo {
-      top: 10px;}
   }
