@@ -1,51 +1,61 @@
 body {
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;  /* Allow vertical scroll but hide horizontal overflow */
-    background: rgba(254, 234, 164);
-  }
-  
-  .background {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw; 
-    height: 100vh;
-    z-index: -1;
-    background-image: url("../images/EZZE Design Image.png");
-    background-size: cover;
-  }
-  
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;  /* Allow vertical scroll but hide horizontal overflow */
+  background: rgba(254, 234, 164);
+}
+
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw; 
+  height: 100vh;
+  z-index: -1;
+  background-image: url("../images/EZZE Design Image.png");
+  background-size: cover;
+}
+
+header {
+  position: relative;
+  padding: 28px;
+}
+
+header center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header nav {
+  display: flex; 
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+nav a {
+  padding: 20px;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+.woodcontainer {
+position: relative;
+display: block;
+margin:0 auto;
+width: 853px;
+height: 768px;
+background-image: url(../images/Wood.png)
+
+
+}
+/* Media Queries for smaller screens */
+
+@media only screen and (max-width: 768px) {
   header {
-    position: relative;
-    padding: 28px;
+    text-align: center;
   }
-  
-  header center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  header nav {
-    display: flex; 
-    justify-content: space-between;
-    margin-top: 20px;
-  }
-  
-  nav a {
-    padding: 20px;
-  }
-  
-  img {
-    display: block;
-    margin: 0 auto;
-  }
-  
-  /* Media Queries for smaller screens */
-  
-  @media only screen and (max-width: 768px) {
-    header {
-      text-align: center;
-    }
-  }
+}
