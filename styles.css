@@ -42,13 +42,15 @@ header {
 }
 
 header nav {
-  margin-top: 15px;
-  align-items: center;
+  margin-top: -40px;
+  margin-left: -80px;
+  text-align: center;
 }
 
 nav a {
   padding: 15px;
   cursor: url("../images/spoonpointer.png"), default;
+  background-color: rgbz(200,200,200,2)
 }
 
 #logo {
