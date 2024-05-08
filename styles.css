@@ -58,9 +58,20 @@ nav a {
   margin: 0 auto;
   position: relative;
   top: 10px;
-  right: 350px;
+  right: 320px;
 }
 
+.nav-buttons{
+  display: flex;
+}
+
+.nav-buttons img {
+  margin: 10px;
+  position: relative;
+  right: -220px;
+  top: -60px;
+}
+  
 .woodcontainer {
 position: relative;
 display: block;
