@@ -1,30 +1,36 @@
-<html lang="" "en"=""><head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" type="image/png" href="https://www.pngall.com/wp-content/uploads/2018/04/Soup-PNG-File.png">
   <title>Home - Souple</title>
 </head>
-
-<body class="background">
-  <header>
-<div class="woodcontainer">
-    <img src="../images/Logo.png" alt="My Logo" id="logo" width="192;" height="75;"><div class="nav-buttons">
-      
-        <img src="../images/Home.png" alt="Home">
-         <img src="../images/Recipes.png" alt="Recipes">
-        <img src="../images/Blog.png" alt="Blog">
-        <img src="../images/Gallery.png" alt="Gallery">
-    </div><button onclick="changePageTitle('lol you got scammed')" class="trollbutton">
-        Give me an unlimited supply of soup =D </button>
-</div>
-    <p style="position: absolute; bottom: 0; left: 0; width: 100%; text-align: center; z-index: 1;">All soups reserved 2024</p>
-  </header>
-  <script>
-    function changePageTitle(newtitle) {
-      document.title = newtitle + " - Souple";
-    }
+  <body class="content">  <header>
+      <div class="woodcontainer">
+        <canvas id="share" width="300" height="125">
+        </canvas>
+        <canvas id="blog" width="475" height="250">
+        </canvas>
+        <canvas id="soup-of-the-week" width="300" height="250">
+        </canvas>
+        <canvas id="trivia" width="300" height="125">
+        </canvas>
+        <img src="../images/Logo.png" alt="My Logo" id="logo" width="20%">
+        <nav class="nav-buttons">
+          <img id="homeImage" src="../images/Home.png" a href="#" onclick="changePageTitle('Home'); return false;" alt="Home">
+          <img id="recipesImage" src="../images/Recipes.png" a href="#" onclick="changePageTitle('Recipes'); return false;" alt="Recipes">
+          <img id="blogsImage" src="../images/Blogs.png" a href="#" onclick="changePageTitle('Blogs'); return false;" alt="Blogs">
+          <img id="galleryImage" src="../images/Gallery.png" a href="#" onclick="changePageTitle('Gallery'); return false;" alt="Gallery">
+        </nav>
+        <button onclick="changePageTitle('lol you got scammed')" class="trollbutton">
+          Give me an unlimited supply of soup =D
+        </button>
+      </div>
+      <p style="position: absolute; bottom: 0; left: 0; width: 100%; text-align: center; z-index: 1;">All soups reserved 2024</p>
+    </header>
+  <script src="scripts.js">
   </script>
-
-
-</body></html>
+</body>
+</html>
