@@ -1,199 +1,104 @@
+body::-webkit-scrollbar { width: 7px }
+body::-webkit-scrollbar-thumb { background: grey }
+body::-webkit-scrollbar-track { background: white; border-radius: 1px; }
+
+@supports not selector(::-webkit-scrollbar) {
+  body { scrollbar-color: white grey }
+}
+
+img { object-fit: cover; border-radius: 4px; image-rendering: pixelated; }
+.img { box-shadow: 0px 0px 5px black; -webkit-box-reflect: below 2px linear-gradient(transparent, rgba(0, 0, 0, 0.3)) }
+.icon { width: 30px; height: 30px; vertical-align: middle }
+hr { border: 1px solid rgba(255, 255, 255, 0.2); width: 75% }
+h1, h2 { box-shadow: none !important }
+a { color: rgb(217 153 122) }
+a:visited { color: rgb(201, 112, 67) }
+footer { font-family: Irish Grover }
+button,.box-button,#nav-btns img, #go-button:hover { cursor: url(../images/cursor/pointer.png), auto }
+
 body {
-  margin: 0;
-  padding: 0;
   background: rgba(254, 234, 164);
-  background-image: url("../images/EZZE Design Image.png");
+  background-image: url(../images/Texture.png);
   background-size: cover;
-  cursor: url("../images/soupcursor.png"), auto;
-  overflow: auto;
+  cursor: url(../images/cursor/cursor.png), auto;
+  margin: 5px 0px 0px 0px;
+  overflow: hidden;
 }
 
-body.content {
-  margin: 0;
-  padding: 0;
-  overflow: auto;
+h1, h2, h3, h4, h5, h6 { 
+  color: wheat; 
+  text-align: center; 
+  font-family: Chelsea Market; 
+  margin-block: 10px;
+  font-weight: normal;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 10px; 
+  filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.8));
 }
 
-.background-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  background-size: cover;
-}
-button {
-  background-color: rgba(254, 234, 164);
-  color: rgba(0, 0, 0);
-  box-shadow: 1.5px 1px 6px rgba(0,0,0,0.8);
-  border-radius: 6px
+text, p { 
+  font-family: Chelsea Market; 
+  font-size: 12px;
+  word-break: break-all;
+  color: black;
 }
 
-.button {
-  cursor: url("../images/spoonpointer.png"), default;
+#main {
+  background-image: url(../images/Wood.png);
+  box-shadow: 0px 5px 4px black;
+  border-radius: 10px;
+  margin: 0 auto;
+  width: 780px;
+  height: 100vh;
 }
 
-button:hover {
-  background-color: rgba(197, 178, 111);
-  color: #621e1e;
-  cursor: url("../images/spoonpointer.png"), default;
-}
-
-.trollbutton {
-  position: relative;  
-  top: 0;
-  left: 280px;
-}
-
-
-header {
-  position: relative;
-  padding: 28px;
-}
-
-header nav {
-  margin-top: -40px;
-  margin-left: -80px;
-  text-align: center;
-}
-
-nav a {
-  background-color: rgbz(200, 200, 200, 2)
+#nav {
+  display: flex;
+  #nav-btns { margin: auto;
+    img { width: 85px } }
 }
 
 #logo {
   display: block;
-  margin: 0 auto;
-  position: relative;
-  top: 10px;
-  right: 330px;
+  width: 180px;
+  padding: 10px;
 }
 
-.wavy span { 
-  position: relative; 
-  display: inline-block; 
-  text-indent: -10px;
-  animation: animate 2s ease-in-out infinite; 
-  animation-delay: calc(0.1s * var(--i)); 
-} 
-
-@keyframes animate { 
-  0% { 
-      transform: translateY(0px); 
-  } 
-
-  20% { 
-      transform: translateY(-20px); 
-  } 
-
-  40%, 
-  100% { 
-      transform: translateY(0px); 
-  } 
-} 
-
-#portals {
-  width: 300px;
-  height: 250px;
-  overflow: auto;
+#content { margin: 0px 14px }
+.box-button {
   position: absolute;
-  bottom: 205px;
-  left: 20px;
-  }
+  bottom: -25px;
+  right: -15px;
+}
 
-#coolwebsites {
-  width: 300px;
-  height: 125px;
-  overflow: visible;
-  position: absolute;
-  bottom: 490px;
-  left: 20px;
-  }
+.box-button.left { left: -15px !important }
+.box-button.middle { justify-self: anchor-center }
+.box { position: relative }
 
-#trivia {
-  width: 300px;
-  height: 100px;
-  overflow: visible;
-  position: absolute;
-  bottom: 70px;
-  left: 20px;
-  }
+.boxes { display: flex; flex-direction: column; gap: 20px; }
 
-#aboutme {
-  width: 475px;
-  height: 250px;
-  overflow: auto;
-  position: absolute;
-  bottom: 365px;
-  left: 352.5px;
-  }
-
-.style1 {
+.box-content {
   border-radius: 10px;
   background-color: rgba(1, 1, 1, 0.2);
-  border: 2.25px solid rgba(0, 0, 0, 0.5);
-  box-shadow: rgba(0, 0, 0, 0.6) 0px 0px 10px; 
+  border: 1px solid rgba(0, 0, 0, 0.41);
+  box-shadow: rgba(0, 0, 0, 0.6) 0px 0px 10px;
+  overflow-y: auto;
+  height: 100%;
+  p {
+    padding: 7px;
+  }
 }
 
-.nav-buttons img {
-  position: relative;
-  padding: 1px;
-  margin: 0px;
-  left: 35px;
-  width: 90px;
-  height: auto;
-  cursor: url("../images/spoonpointer.png"), default;
-}
-
-.woodcontainer {
-  position: relative;
-  display: block;
-  margin: 0 auto;
-  width: 853px;
-  height: 768px;
-  background-image: url(../images/Wood.png)
-}
-
-.rainbow-text {
-  color: rgba(255, 255, 255, 0.5); /* Ensures text color doesn't interfere */
+rainbow {
+  color: rgba(255, 255, 255, 0.5);
   background: linear-gradient(to right, 
     red, orange, yellow, green, blue, indigo, violet, indigo, blue, green, yellow, orange, red);
-  background-size: 500%;  /* Stretches the gradient for animation */
-  animation: rainbow-flow infinite linear 36s; /* Animation properties */
-  -webkit-background-clip: text;  /* Clips the gradient to the text shape */
+  background-size: 500%;
+  animation: rainbow-flow infinite linear 36s;
+  background-clip: text;
+  -webkit-background-clip: text;
 }
 
 @keyframes rainbow-flow {
-  0% { background-position: 50% 0%; } /* Starts at the beginning of the gradient */
-  100% { background-position: -200%; } /* Moves the gradient to the left, revealing new colors */
-}
-
-/* Media Queries for smaller screens */
-
-@media only screen and (max-width: 768px) {
-  header {
-    text-align: center;
-  }
-}
-
-/* Google Fonts */
-
-.irish-grover-regular {
-  font-family: "Irish Grover", system-ui;
-  font-weight: 200;
-  font-style: normal;
-}
-
-.chelsea-market-regular {
-  font-family: "Chelsea Market", system-ui;
-  font-weight: 200;
-  font-style: normal;
-}
-
-// <uniquifier>: Use a unique and descriptive class name
-
-.jaro-<uniquifier> {
-  font-family: "Jaro", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
+  0% { background-position: 50% 0%; }
+  100% { background-position: -200%; }
 }
