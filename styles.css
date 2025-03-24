@@ -1,9 +1,14 @@
-body::-webkit-scrollbar { width: 7px }
-body::-webkit-scrollbar-thumb { background: grey }
-body::-webkit-scrollbar-track { background: white; border-radius: 1px; }
-
-@supports not selector(::-webkit-scrollbar) {
-  body { scrollbar-color: white grey }
+::-webkit-scrollbar { width: 7px }
+::-webkit-scrollbar-thumb { 
+  background: rgb(117, 63, 13); 
+  border-radius: 10px; 
+  border: 1.5px solid transparent;
+  background-clip: content-box;
+}
+::-webkit-scrollbar-track { 
+  background: wheat; 
+  border-radius: 10px; 
+  border: 1px solid rgba(0, 0, 0, 0.41);
 }
 
 img { object-fit: cover; border-radius: 4px; image-rendering: pixelated; }
@@ -13,7 +18,7 @@ hr { border: 1px solid rgba(255, 255, 255, 0.2); width: 75% }
 h1, h2 { box-shadow: none !important }
 a { color: rgb(217 153 122) }
 a:visited { color: rgb(201, 112, 67) }
-footer { font-family: Irish Grover }
+footer { font-family: Irish Grover; text-align: center; padding-top: 15px; }
 button,.box-button,#nav-btns img, #go-button:hover { cursor: url(../images/cursor/pointer.png), auto }
 
 body {
@@ -66,7 +71,7 @@ text, p {
 #content { margin: 0px 14px }
 .box-button {
   position: absolute;
-  bottom: -25px;
+  bottom: -20px;
   right: -15px;
 }
 
