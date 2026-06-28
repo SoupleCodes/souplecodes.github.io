@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="/images/favicon.png">
+  <link rel="stylesheet" href="/styles/styles.css">
+  <script type="text/javascript" src="/js/scripts.js"></script>
+
+  <title>>> souple</title>
+
+<body>
+  <div id="banner"></div>
+  <div id="main-content">
+    <div id="tabs" onclick="switchTab(event)">
+      <div class="tab tab-about selected">about</div>
+      <div class="tab tab-interests">interests</div>
+      <div class="tab tab-blog">blog</div>
+      <div class="tab tab-music">music</div>
+      <div class="tab tab-guestbook">guestbook</div>
+    </div>
+
+    <div id="tabs-content">
+      <div class="tab-about">
+        <div class="cool-title">
+          <h1>souple’s 
+              <div id="slider-wrapper" onmouseenter="if(event.target.tagName=='DIV')randomSlot()" onmouseleave="if(event.target.tagName=='DIV')resetSlot()">
+                <ul style="transform: translate(0px, 0px);">
+                  <li>cool</li>
+                  <li onclick="goTo('https://windynoodles.github.io/get-goobertd/')">feeling sneaky</li>
+                  <li>crazy</li>
+                  <li onclick="goTo('https://slither.io/')">a slithery snake</li>
+                  <li onclick="goTo('https://windynoodles.github.io/goobert/')">watching goobert...</li>
+                  <li>epic</li>
+                  <li onclick="playSfx('/sfx/a.mp3')">thinking...</li>
+                  <li onclick="goTo('https://wasteof.money/users/souple')">wasting money</li>
+                  <li>a clever clog</li>
+                  <li onclick="goTo('https://wiki.darflen.com/wiki/Souple')">wiki</li>
+                  <li onclick="goTo('https://www.pmichaud.com/toast/')">blow-torching a tart</li>
+                  <li onclick="goTo('https://www.youtube.com/watch?v=iq_d8VSM0nw')">favorite song</li>
+                </ul>
+              </div>
+          </h1>
+        </div>
+        <p>This is about me. I am a person just like all the other people who are looking at this right now. I’m 17 years old currently existing in the US state commonly known as Florida. I love coding and designing so much I made this site myself!!!213e434. I love pop, rock, and all things Avril Lavigne.</p>
+        <p>If you think coding is boring then I dont respect you as a human being /j/j/j/j</p>
+        <p>I redesigned this site after over 2 years since I’ve designed a lot of stuff since then and also I wanted to give this site a refreshing look! I wanted to make this soup-themed but because my site had very little content, I decided to go simple first. If you’re looking for someone to design/code your website, just give me a shout in the guestbook and say the specifics!</p>
+        <p>You can access me at...</p>
+        <ul>
+          <li>scratch: <a href="https://scratch.mit.edu/users/SSSouple/" target="_blank">@sssouple</a>
+          </li>
+          <small>i make games there... used to be the only place where i make games but soon ill make an experimental HTML multiplayer game! *ahem* applause anyone?
+    i also have a long overdue super mario maker project that i PROMISE to release VERY soon.<br><br></small>
+
+          <li>darflen: <a href="https://scratch.mit.edu/users/SSSouple/" target="_blank">@souple</a>
+          </li>
+          <small>i post things there. this is also where i beg people to view my little side-projects. right now im making my third darflen client! i know..iknow....when am i gonna stop... its gonna have the 2010s google+ material design look.<br><br></small>
+
+          <li>wasteof.money: <a href="https://wasteof.money/users/souple" target="_blank">@souple</a>
+          </li>
+          <small>i very rarely visit this site because darflen is obviously better than wasteof. duh...</small>
+        </ul>
+      </div>
+
+      <div class="tab-interests hidden">
+        <div class="cool-title"><h1>souple’s <span class="cool">interests</span></h1></div>
+        <p>
+          <b>Music: </b>eminem, justin bieber, bruno mars, lady gaga, maroon 5, taylor swift, katy perry, justin timberlake, black eyed peas, cher lloyd, avril lavigne, the script
+          <br>
+          <br>
+          <b>Film: </b>chronicles of narnia, harry potter series, home alone, elf, mean girls, freaky friday
+          <br>
+          <br>
+          <b>Television: </b>will and grace, outnumbered, taskmaster, last one laughing (uk), nathan for you, drake & bell, fresh prince, everybody hates chris, the series of unfortunate events, top gear, motherland, psych, house
+          <br>
+          <br>
+          <b>Comedy: </b>jimmy carr, diane morgan, richard ayoade
+        </p>
+      </div>
+
+      <div class="tab-blog hidden">
+        <div class="cool-title"><h1>souple’s <span class="cool">blog</span></h1></div>
+
+        <div id="blogs"></div>
+      </div>
+
+      <div class="tab-music hidden">
+        <div class="cool-title"><h1>souple’s <span class="cool">music</span></h1></div>
+        <ul>
+          <li>
+            Playful blocks
+            <span class="fr">
+              <a href="javascript:playSfx('/sfx/music_1.mp3')">Play</a>
+              <a href="/sfx/music_1.mp3" download>Download</a>
+            </span>
+          </li>
+          <li>
+            Spooky
+            <span class="fr">
+              <a href="javascript:playSfx('/sfx/music_2.mp3')">Play</a>
+              <a href="/sfx/music_2.mp3" download>Download</a>
+            </span>
+          </li>
+          <small>Fun fact. This song was made placing smiley faces on the <a href="https://www.beepbox.co">beepbox</a> editor!</small>
+        </ul>
+      </div>
+
+      <div class="tab-guestbook hidden">
+        <div class="cool-title"><h1>souple’s <span class="cool">guestbook</span></h1></div>
+
+        <div id="guestbook-comments"></div>
+
+        <p>
+          <iframe name="submitpost" class="hidden"></iframe>
+          <form action="/api/post/create" method="post" autocomplete="off" target="submitpost" onsubmit="updateComments()"> 
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label for="url">URL:</label><br>
+            <input type="text" id="url" name="url"><br><br>
+
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="6" cols="40" required></textarea><br>
+
+            <button type="submit">Submit</button>
+          </form>
+        </p>
+      </div>
+
+      <center class="footer">All soups reserved 2024-26</center>
+    </div>
+
+  </div>
+</body>
+
+</html>

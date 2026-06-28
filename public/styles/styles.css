@@ -1,0 +1,124 @@
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+html {
+  overflow: clip;
+}
+body {
+  background: #26262C;
+  cursor: url("/images/cursor.png"), auto;
+  padding: 24px;
+  box-sizing: border-box;
+  font: 70% Arial;
+}
+#main-content {
+  width: 610px;
+  height: 100%;
+}
+a {
+  color: #62C073;
+  text-decoration: none;
+  cursor: url("/images/cursor.png"), auto;
+}
+a:hover, #slider-wrapper li:hover { text-decoration: underline }
+h1, h2, h3, h4, h5, h6, p, li, .cool, form {
+  color: white
+}
+button {
+  border-radius: 00px;
+  border-width: thin;
+  cursor: url("/images/cursor.png"), auto;
+  font-size: 88%;
+}
+input, textarea {
+  font-size: 10px;
+  width: 100%;
+}
+small { color: #585768 }
+b { color: #62C073; font-weight: normal; }
+p {
+  margin: 10px 0px;
+}
+.fl { float: left }
+.fr { float: right }
+.hidden {
+  display: none;
+  visibility: collapse;
+  height: 0px
+}
+.footer {
+  clear: both;
+  padding-top: 60px;
+  color: #585768
+}
+
+
+#banner {
+  border: 2px solid #373641;
+  background: url("/images/banner.png");
+  width: 610px;
+  height: 130px;
+  margin-bottom: 16px
+}
+.cool-title h1 { 
+  margin: 0px;
+  color: #62C073;
+  font-weight: lighter;
+}
+.notransition { transition: none !important }
+#slider-wrapper {
+  height: 26px;
+  overflow: hidden;
+  vertical-align: top;
+  display: inline-block;
+}
+#slider-wrapper ul {
+  margin: 0px;
+  text-align: unset;
+  padding: 0px;
+  list-style-type: none;
+  transition: all 1s ease-out;
+}
+#slider-wrapper ul li {
+  color: white;
+  margin-bottom: 10px;
+  height: 26px;
+}
+
+
+#tabs {
+  border-right: 3px solid #373641;
+  padding: 6px 6px 12px 0px;
+  float: left;
+}
+#tabs-content {
+  float: left;
+  width: 370px;
+  height: 470px;
+  padding-left: 10px;
+}
+.tab {
+  width: 172px;
+  height: 23px;
+  background: #373641;
+  color: #B3B2BC;
+  margin-bottom: 4px;
+  padding-left: 5px;
+  line-height: 2;
+}
+.tab.selected, .tab:hover {
+  background: #62C073;
+  color: white
+}
+
+.tab-music ul {
+  list-style-type: none;
+  list-style-image: url('/images/music_icon.png');
+  padding: 0px 16px;
+}
+.tab-music ul li {
+  margin-top: 10px;
+}

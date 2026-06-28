@@ -1,0 +1,22 @@
+{
+  "name": "db",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "pages": "npx wrangler pages dev ./public",
+    "deploy": "wrangler deploy",
+    "dev": "wrangler dev",
+    "start": "wrangler dev",
+    "test": "vitest",
+    "schema-local": "npx wrangler d1 execute souple --local --file ./schema.sql",
+    "schema-global": "npx wrangler d1 execute souple --file ./schema.sql"
+  },
+  "devDependencies": {
+    "@cloudflare/vitest-pool-workers": "^0.12.4",
+    "hono": "^4.12.27",
+    "vitest": "~3.2.0"
+  },
+  "dependencies": {
+    "wrangler": "^4.56.0"
+  }
+}
