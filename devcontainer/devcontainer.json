@@ -1,5 +1,0 @@
-{
-  "postCreateCommand": "",
-  "postStartCommand": "bash ./start.sh",
-  "forwardPorts": [ 30006 ]
-}

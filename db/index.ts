@@ -73,13 +73,6 @@ app
           status: 400
         })
       }
-      if (!( c.env && c.env.DEV_MODE )) {
-        return c.json({
-          message: "Only I can make a blog lol",
-          error: true,
-          status: 400
-        })
-      }
       
       const new_date = new Date().toISOString()
       const { success } = await c.env.DB.prepare("INSERT INTO blogs (content, created_at) VALUES (?, ?)")

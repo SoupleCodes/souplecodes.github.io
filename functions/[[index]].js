@@ -3,7 +3,7 @@ import { renderBlog } from '../templates/blog/.js'
 
 export async function httpFetch(env, route, method, body, responseType) {
     let link
-    if (env && env.DEV_MODE) {
+    if (env && env.DEV_MODE && env.DEV_MODE==true) {
         link = 'http://localhost:8787'
     } else {
         link = 'https://db.souple.workers.dev'
@@ -60,10 +60,15 @@ export async function onRequest(context) {
                 return new Response(await renderComment(result.data, timezone), {headers: {'Content-Type': 'text/html'}})
                 break;
             case path.startsWith('/api/blog/create'):
+                if (!( env && env.DEV_MODE )) {
+                    return new Response('Only I can make blogs lol', {headers: {'Content-Type': 'text/html'}})
+                }
+
                 let blogData = await request.formData()
                 let blogCreateResult = await httpFetch(env, '/blog', 'POST', {
                     content: blogData.get('blog-content'),
                 }, 'json')
+                console.log(blogCreateResult)
 
                 return new Response('Successfully created blog', {headers: {'Content-Type': 'text/html'}})
                 break;
