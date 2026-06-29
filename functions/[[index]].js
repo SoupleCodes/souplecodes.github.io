@@ -45,13 +45,19 @@ export async function onRequest(context) {
 
     if (path) {
         switch(true) {
-            case path.startsWith('/api/post/create'):
+            case path.startsWith('/api/comment/create'):
                 let data = await request.formData()
                 let result = await httpFetch(env, '/comment', 'POST', {
-                    content: data.get('blog-content')
+                    author: data.get('name'),
+                    website: data.get('url'),
+                    message: data.get('message')
                 }, 'json')
 
-                return new Response('', {headers: {'Content-Type': 'text/html'}})
+                console.log(result)
+                if (result.error && (result.error==true)) {
+                    return new Response('error', {headers: {'Content-Type': 'text/html'}})
+                }
+                return new Response(await renderComment(result.data, timezone), {headers: {'Content-Type': 'text/html'}})
                 break;
             case path.startsWith('/api/blog/create'):
                 let blogData = await request.formData()
